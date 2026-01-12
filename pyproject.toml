@@ -1,0 +1,29 @@
+[project]
+name = "DTransformer"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "numpy",
+    "scikit-learn",
+    "scipy",
+    "tomlkit",
+    "torch",
+    "tqdm",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "python-lsp-ruff",
+    "python-lsp-server",
+    "ruff",
+]
+
+[tool.setuptools]
+packages = ["DTransformer"]
+
+[tool.ruff.lint]
+ignore = ["E741", "F401"]

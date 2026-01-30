@@ -1,0 +1,36 @@
+{
+    "hyperparams": [
+        {
+            "d_model": 128,
+            "n_layers": 3,
+            "n_heads": 8,
+            "n_know": 32,
+            "dropout": 0.2,
+            "lambda_cl": 0.1
+        },
+        {
+            "d_model": 256,
+            "n_layers": 3,
+            "n_heads": 8,
+            "n_know": 32,
+            "dropout": 0.2,
+            "lambda_cl": 0.1
+        },
+        {
+            "d_model": 128,
+            "n_layers": 4,
+            "n_heads": 8,
+            "n_know": 32,
+            "dropout": 0.3,
+            "lambda_cl": 0.15
+        }
+    ],
+    "common_args": {
+        "model": "DTransformer",
+        "batch_size": 32,
+        "test_batch_size": 64,
+        "with_pid": true,
+        "cl_loss": true,
+        "proj": true
+    }
+}

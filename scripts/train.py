@@ -22,7 +22,13 @@ parser.add_argument(
 )
 
 # data setup
-datasets = tomlkit.load(open(os.path.join(DATA_DIR, "datasets.toml")))
+parser.add_argument(
+    "-c", "--config",
+    help="path to datasets config file",
+    default=os.path.join(DATA_DIR, "datasets.toml")
+)
+args_temp, _ = parser.parse_known_args()
+datasets = tomlkit.load(open(args_temp.config))
 parser.add_argument(
     "-d",
     "--dataset",
